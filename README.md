@@ -1,8 +1,33 @@
-# React + Vite
+# Suryaveer Singh Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Modern developer portfolio built with React, Vite, Tailwind CSS, and Framer Motion.
 
-Currently, two official plugins are available:
+## Tech Stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- React.js
+- Vite
+- Tailwind CSS
+- Framer Motion
+
+## Featured Projects
+
+- AQI Prediction using Machine Learning
+- AI Disaster Management System
+- Team Task Manager
+- Resume Parser with Skill Matcher
+- Healthcare Management System
+
+## Run Locally
+
+```bash
+git clone https://github.com/suryaveersingh18/portfolio.git
+cd portfolio
+npm install
+npm run dev
+```
+
+## Contact
+
+- GitHub: https://github.com/suryaveersingh18
+- LinkedIn: https://www.linkedin.com/in/suryaveer16/
+- Email: suryaayush1879082@gmail.com
