@@ -5,8 +5,8 @@ const projects = [
     title: "AQI Prediction using Machine Learning",
     desc: "Predicts Air Quality Index using pollution and environmental datasets with regression models and data analysis techniques.",
     tech: ["Python", "Pandas", "Scikit-learn", "Machine Learning"],
-    github: "#",
-    demo: "#",
+    github: "https://github.com/suryaveersingh18/AI-Air-Quality-Dashboard",
+    demo: "https://ai-air-quality.streamlit.app/",
     featured: true,
   },
   {
@@ -78,8 +78,8 @@ const projects = [
     title: "Personal Portfolio Website",
     desc: "Modern animated portfolio showcasing projects, skills, and experience.",
     tech: ["React", "Tailwind", "Framer Motion"],
-    github: "#",
-    demo: "#",
+    github: "https://github.com/suryaveersingh18/portfolio",
+    demo: "https://portfolio-sepia-tau-56.vercel.app/",
   },
 ];
 
