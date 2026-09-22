@@ -33,7 +33,7 @@ const Contact = () => {
                             opacity-0 group-hover:opacity-100 transition duration-300"></div>
 
             <img
-              src="/profile.jpg"
+              src="/Portrait.jpg"
               alt="profile"
               className="w-full h-full object-cover scale-110 object-[center_20%] group-hover:scale-115 transition duration-300"
             />
