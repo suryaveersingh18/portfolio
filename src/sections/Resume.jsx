@@ -38,7 +38,7 @@ const Resume = () => {
                      shadow-2xl"
         >
           <iframe
-            src="/Suryaveer's Resume.pdf"
+            src="/Suryaveer's_Resume.pdf"
             title="Resume"
             className="w-full h-[700px]"
           ></iframe>
@@ -58,7 +58,7 @@ const Resume = () => {
           </div>
 
           <h3 className="text-xl font-semibold mb-3">
-            Suryaveer's Resume
+            Suryaveer's_Resume
           </h3>
 
           <p className="text-gray-600 dark:text-gray-400 mb-6 text-sm">
@@ -66,7 +66,7 @@ const Resume = () => {
           </p>
 
           <a
-            href="/Suryaveer's Resume.pdf"
+            href="/Suryaveer's_Resume.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-block px-6 py-3 rounded-xl
@@ -82,8 +82,8 @@ const Resume = () => {
       {/* Download Button */}
       <div className="text-center">
         <a
-          href="/Suryaveer's Resume.pdf"
-          download="Suryaveer's Resume.pdf"
+          href="/Suryaveer's_Resume.pdf"
+          download="Suryaveer's_Resume.pdf"
           className="inline-block px-8 py-3 rounded-xl
                      bg-black text-white
                      dark:bg-white dark:text-black

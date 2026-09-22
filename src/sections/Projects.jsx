@@ -2,84 +2,51 @@ import { motion } from "framer-motion";
 
 const projects = [
   {
-    title: "AQI Prediction using Machine Learning",
-    desc: "Predicts Air Quality Index using pollution and environmental datasets with regression models and data analysis techniques.",
-    tech: ["Python", "Pandas", "Scikit-learn", "Machine Learning"],
-    github: "https://github.com/suryaveersingh18/AI-Air-Quality-Dashboard",
-    demo: "https://ai-air-quality.streamlit.app/",
-    featured: true,
-  },
-  {
+    number: "01",
     title: "Team Task Manager",
-    desc: "Collaborative full stack productivity platform for managing tasks, teams, deadlines, and workflows efficiently.",
-    tech: ["React", "Node.js", "MongoDB", "Express"],
-    github: "#",
-    demo: "#",
-    featured: true,
-  },
-  {
-    title: "AI Disaster Management System",
-    desc: "AI-powered disaster alert and emergency coordination platform with predictive analysis and real-time updates.",
-    tech: ["React", "Python", "Machine Learning", "APIs"],
-    github: "#",
-    demo: "#",
-    featured: true,
-  },
-  {
-    title: "Crop Prediction System",
-    desc: "ML-based system to predict optimal crops using environmental and soil data.",
-    tech: ["Python", "Django", "Machine Learning"],
-    github: "#",
+    category: "Full Stack Development",
+    description:
+      "A full-stack task management application for managing projects, assigning tasks, tracking progress, and organizing team workflows.",
+    tech: ["React.js", "JavaScript", "REST API", "SQL"],
+    github: "https://github.com/suryaveersingh18/team-task-manager/tree/main/backend",
     demo: "#",
   },
   {
-    title: "Resume Parser with Skill Matcher",
-    desc: "NLP-based system that extracts skills from resumes and matches them with job roles.",
-    tech: ["Python", "Flask", "NLP"],
-    github: "#",
+    number: "02",
+    title: "IPL Auction Data Analysis",
+    category: "Data Analytics",
+    description:
+      "Analyzed IPL auction data to identify player valuations, team spending patterns, auction trends, and role-wise insights.",
+    tech: ["Python", "Pandas", "NumPy", "Matplotlib"],
+    github: "https://github.com/suryaveersingh18/ipl-auction-analysis",
     demo: "#",
   },
   {
-    title: "Healthcare Management System",
-    desc: "Full stack application for managing patients, appointments, and medical records.",
-    tech: ["Django", "MySQL"],
-    github: "#",
+    number: "03",
+    title: "AQI Analysis & Prediction",
+    category: "Data Analytics · Machine Learning",
+    description:
+      "Analyzed air-quality data, explored correlations and contributing factors, and built machine-learning models for AQI prediction.",
+    tech: [
+      "Python",
+      "Pandas",
+      "NumPy",
+      "Scikit-learn",
+      "Matplotlib",
+      "Seaborn",
+    ],
+    github: "https://github.com/suryaveersingh18/AI-Air-Quality-Dashboard",
     demo: "#",
   },
   {
-    title: "E-commerce Portal",
-    desc: "Complete shopping platform with authentication, cart, and order management.",
-    tech: ["Django", "React"],
-    github: "#",
+    number: "04",
+    title: "RAG Document Analysis System",
+    category: "AI · LLM",
+    description:
+      "A document-based RAG system that uses semantic search and retrieval to extract relevant information and generate context-aware responses.",
+    tech: ["Python", "LangChain", "LLM", "Vector Database"],
+    github: "https://github.com/suryaveersingh18/rag-documentation-assistant",
     demo: "#",
-  },
-  {
-    title: "Inventory Stockout Prediction",
-    desc: "Predicts stock shortages using historical inventory data and ML models.",
-    tech: ["Python", "Pandas", "Machine Learning"],
-    github: "#",
-    demo: "#",
-  },
-  {
-    title: "Feedback Sentiment Analysis",
-    desc: "Analyzes user feedback and classifies sentiment using NLP techniques.",
-    tech: ["Python", "NLP", "Scikit-learn"],
-    github: "#",
-    demo: "#",
-  },
-  {
-    title: "Weather App",
-    desc: "Real-time weather application using API integration with dynamic UI.",
-    tech: ["HTML", "CSS", "JavaScript"],
-    github: "#",
-    demo: "#",
-  },
-  {
-    title: "Personal Portfolio Website",
-    desc: "Modern animated portfolio showcasing projects, skills, and experience.",
-    tech: ["React", "Tailwind", "Framer Motion"],
-    github: "https://github.com/suryaveersingh18/portfolio",
-    demo: "https://portfolio-sepia-tau-56.vercel.app/",
   },
 ];
 
@@ -87,114 +54,167 @@ const Projects = () => {
   return (
     <section
       id="projects"
-      className="min-h-screen px-6 md:px-16 py-20 
-                 bg-white dark:bg-black 
-                 text-black dark:text-white 
-                 transition"
+      className="relative min-h-screen px-6 md:px-16 py-24
+                 bg-white dark:bg-black
+                 text-black dark:text-white
+                 transition-colors duration-500"
     >
-      {/* Heading */}
-      <motion.div
-        initial={{ opacity: 0, y: 30 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5 }}
-        className="text-center mb-14"
-      >
-        <h2 className="text-4xl md:text-5xl font-bold mb-4">
-          My Projects
-        </h2>
+      <div className="max-w-7xl mx-auto">
 
-        <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-          A collection of my work in Full Stack Development, Machine Learning,
-          AI Systems, and Data Analytics.
-        </p>
-      </motion.div>
+        {/* Header */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="mb-14"
+        >
+          <p className="text-sm uppercase tracking-[0.3em]
+                        text-gray-500 mb-3">
+            Selected Work
+          </p>
 
-      {/* Grid */}
-      <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-        {projects.map((project, index) => (
-          <motion.div
-            key={index}
-            initial={{ opacity: 0, y: 60 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{
-              duration: 0.5,
-              delay: index * 0.08,
-            }}
-            whileHover={{
-              scale: 1.03,
-              y: -5,
-            }}
-            className="relative p-6 rounded-2xl 
-                       bg-gray-100 dark:bg-white/5
-                       border border-black/10 dark:border-white/10
-                       shadow-md hover:shadow-2xl
-                       backdrop-blur-lg
-                       overflow-hidden
-                       transition"
-          >
+          <div className="flex flex-col md:flex-row md:items-end
+                          md:justify-between gap-6">
 
-            {/* Glow Effect */}
-            <div className="absolute inset-0 opacity-0 hover:opacity-100 transition duration-500">
-              <div className="absolute top-0 left-0 w-40 h-40 bg-blue-500/10 blur-3xl"></div>
-              <div className="absolute bottom-0 right-0 w-40 h-40 bg-purple-500/10 blur-3xl"></div>
-            </div>
+            <h2 className="text-4xl md:text-6xl font-bold tracking-tight">
+              Projects
+            </h2>
 
-            
-
-            {/* Title */}
-            <h3 className="text-2xl font-semibold mb-3 relative z-10">
-              {project.title}
-            </h3>
-
-            {/* Description */}
-            <p className="text-gray-700 dark:text-gray-400 mb-5 text-sm leading-relaxed relative z-10">
-              {project.desc}
+            <p className="max-w-md text-gray-600 dark:text-gray-400
+                          text-base md:text-lg leading-relaxed">
+              A selection of projects across software engineering,
+              data analytics, machine learning, and AI.
             </p>
 
-            {/* Tech Tags */}
-            <div className="flex flex-wrap gap-2 mb-6 relative z-10">
-              {project.tech.map((tech, i) => (
+          </div>
+        </motion.div>
+
+        {/* Projects Grid */}
+        <div className="grid md:grid-cols-2 gap-6">
+
+          {projects.map((project, index) => (
+            <motion.article
+              key={project.title}
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{
+                duration: 0.6,
+                delay: index * 0.1,
+              }}
+              whileHover={{ y: -6 }}
+              className="group relative rounded-3xl p-7 md:p-8
+                         bg-gray-50 dark:bg-white/[0.04]
+                         border border-black/10 dark:border-white/10
+                         hover:border-black/20 dark:hover:border-white/20
+                         shadow-sm hover:shadow-xl
+                         transition-all duration-300"
+            >
+
+              {/* Top Row */}
+              <div className="flex items-start justify-between mb-8">
+
                 <span
-                  key={i}
-                  className="text-xs px-3 py-1 rounded-md
-                             bg-blue-100 text-blue-600
-                             dark:bg-blue-500/20 dark:text-blue-400"
+                  className="text-sm font-mono
+                             text-gray-400 dark:text-gray-600"
                 >
-                  {tech}
+                  {project.number}
                 </span>
-              ))}
-            </div>
 
-            {/* Buttons */}
-            <div className="flex gap-3 relative z-10">
-              <a
-                href={project.github}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="px-4 py-2 rounded-lg text-sm font-medium
-                           bg-black text-white
-                           dark:bg-white dark:text-black
-                           hover:scale-105 transition"
+                <span
+                  className="text-xs px-3 py-1.5 rounded-full
+                             bg-black/5 dark:bg-white/10
+                             text-gray-600 dark:text-gray-300"
+                >
+                  {project.category}
+                </span>
+
+              </div>
+
+              {/* Title */}
+              <h3
+                className="text-2xl md:text-3xl font-semibold mb-4
+                           tracking-tight
+                           group-hover:translate-x-1
+                           transition-transform duration-300"
               >
-                GitHub
-              </a>
+                {project.title}
+              </h3>
 
-              <a
-                href={project.demo}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="px-4 py-2 rounded-lg text-sm
-                           border border-gray-400 dark:border-gray-500
-                           hover:bg-black hover:text-white
-                           dark:hover:bg-white dark:hover:text-black
-                           transition"
+              {/* Description */}
+              <p
+                className="text-gray-600 dark:text-gray-400
+                           leading-relaxed mb-7"
               >
-                Live Demo
-              </a>
-            </div>
+                {project.description}
+              </p>
 
-          </motion.div>
-        ))}
+              {/* Technologies */}
+              <div className="flex flex-wrap gap-2 mb-8">
+                {project.tech.map((tech) => (
+                  <span
+                    key={tech}
+                    className="px-3 py-1.5 rounded-full text-xs
+                               bg-white dark:bg-white/5
+                               border border-black/10 dark:border-white/10
+                               text-gray-600 dark:text-gray-300"
+                  >
+                    {tech}
+                  </span>
+                ))}
+              </div>
+
+              {/* Links */}
+              <div className="flex items-center gap-3">
+
+                <a
+                  href={project.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2
+                             px-4 py-2.5 rounded-full
+                             bg-black dark:bg-white
+                             text-white dark:text-black
+                             text-sm font-medium
+                             hover:scale-105
+                             transition-transform duration-200"
+                >
+                  GitHub
+                  <span>↗</span>
+                </a>
+
+                <a
+                  href={project.demo}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2
+                             px-4 py-2.5 rounded-full
+                             border border-black/15 dark:border-white/15
+                             text-sm font-medium
+                             hover:bg-black hover:text-white
+                             dark:hover:bg-white dark:hover:text-black
+                             transition-all duration-200"
+                >
+                  Live Demo
+                  <span>↗</span>
+                </a>
+
+              </div>
+
+              {/* Bottom Accent */}
+              <div
+                className="absolute bottom-0 left-8 right-8 h-px
+                           bg-gradient-to-r
+                           from-transparent via-black/10 to-transparent
+                           dark:via-white/10"
+              />
+
+            </motion.article>
+          ))}
+
+        </div>
+
       </div>
     </section>
   );
