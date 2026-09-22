@@ -9,7 +9,6 @@ const projects = [
       "A full-stack task management application for managing projects, assigning tasks, tracking progress, and organizing team workflows.",
     tech: ["React.js", "JavaScript", "REST API", "SQL"],
     github: "https://github.com/suryaveersingh18/team-task-manager/tree/main/backend",
-    demo: "#",
   },
   {
     number: "02",
@@ -19,7 +18,6 @@ const projects = [
       "Analyzed IPL auction data to identify player valuations, team spending patterns, auction trends, and role-wise insights.",
     tech: ["Python", "Pandas", "NumPy", "Matplotlib"],
     github: "https://github.com/suryaveersingh18/ipl-auction-analysis",
-    demo: "#",
   },
   {
     number: "03",
@@ -36,7 +34,7 @@ const projects = [
       "Seaborn",
     ],
     github: "https://github.com/suryaveersingh18/AI-Air-Quality-Dashboard",
-    demo: "#",
+    demo: "https://ai-air-quality.streamlit.app/",
   },
   {
     number: "04",
@@ -46,7 +44,6 @@ const projects = [
       "A document-based RAG system that uses semantic search and retrieval to extract relevant information and generate context-aware responses.",
     tech: ["Python", "LangChain", "LLM", "Vector Database"],
     github: "https://github.com/suryaveersingh18/rag-documentation-assistant",
-    demo: "#",
   },
 ];
 
@@ -61,7 +58,6 @@ const Projects = () => {
     >
       <div className="max-w-7xl mx-auto">
 
-        {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -76,7 +72,6 @@ const Projects = () => {
 
           <div className="flex flex-col md:flex-row md:items-end
                           md:justify-between gap-6">
-
             <h2 className="text-4xl md:text-6xl font-bold tracking-tight">
               Projects
             </h2>
@@ -86,13 +81,10 @@ const Projects = () => {
               A selection of projects across software engineering,
               data analytics, machine learning, and AI.
             </p>
-
           </div>
         </motion.div>
 
-        {/* Projects Grid */}
         <div className="grid md:grid-cols-2 gap-6">
-
           {projects.map((project, index) => (
             <motion.article
               key={project.title}
@@ -111,28 +103,19 @@ const Projects = () => {
                          shadow-sm hover:shadow-xl
                          transition-all duration-300"
             >
-
-              {/* Top Row */}
               <div className="flex items-start justify-between mb-8">
-
-                <span
-                  className="text-sm font-mono
-                             text-gray-400 dark:text-gray-600"
-                >
+                <span className="text-sm font-mono
+                                 text-gray-400 dark:text-gray-600">
                   {project.number}
                 </span>
 
-                <span
-                  className="text-xs px-3 py-1.5 rounded-full
-                             bg-black/5 dark:bg-white/10
-                             text-gray-600 dark:text-gray-300"
-                >
+                <span className="text-xs px-3 py-1.5 rounded-full
+                                 bg-black/5 dark:bg-white/10
+                                 text-gray-600 dark:text-gray-300">
                   {project.category}
                 </span>
-
               </div>
 
-              {/* Title */}
               <h3
                 className="text-2xl md:text-3xl font-semibold mb-4
                            tracking-tight
@@ -142,15 +125,11 @@ const Projects = () => {
                 {project.title}
               </h3>
 
-              {/* Description */}
-              <p
-                className="text-gray-600 dark:text-gray-400
-                           leading-relaxed mb-7"
-              >
+              <p className="text-gray-600 dark:text-gray-400
+                            leading-relaxed mb-7">
                 {project.description}
               </p>
 
-              {/* Technologies */}
               <div className="flex flex-wrap gap-2 mb-8">
                 {project.tech.map((tech) => (
                   <span
@@ -165,9 +144,7 @@ const Projects = () => {
                 ))}
               </div>
 
-              {/* Links */}
               <div className="flex items-center gap-3">
-
                 <a
                   href={project.github}
                   target="_blank"
@@ -184,37 +161,34 @@ const Projects = () => {
                   <span>↗</span>
                 </a>
 
-                <a
-                  href={project.demo}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2
-                             px-4 py-2.5 rounded-full
-                             border border-black/15 dark:border-white/15
-                             text-sm font-medium
-                             hover:bg-black hover:text-white
-                             dark:hover:bg-white dark:hover:text-black
-                             transition-all duration-200"
-                >
-                  Live Demo
-                  <span>↗</span>
-                </a>
-
+                {project.demo && (
+                  <a
+                    href={project.demo}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2
+                               px-4 py-2.5 rounded-full
+                               border border-black/15 dark:border-white/15
+                               text-sm font-medium
+                               hover:bg-black hover:text-white
+                               dark:hover:bg-white dark:hover:text-black
+                               transition-all duration-200"
+                  >
+                    Live Demo
+                    <span>↗</span>
+                  </a>
+                )}
               </div>
 
-              {/* Bottom Accent */}
               <div
                 className="absolute bottom-0 left-8 right-8 h-px
                            bg-gradient-to-r
                            from-transparent via-black/10 to-transparent
                            dark:via-white/10"
               />
-
             </motion.article>
           ))}
-
         </div>
-
       </div>
     </section>
   );
